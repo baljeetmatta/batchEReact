@@ -1,21 +1,67 @@
 
-import './App.css'
-import Greet from './Greet'
+ import './App.css'
+ //import Greeting from './Greeting';
+ import Button from './Button';
+import Controls from './Controls';
+ function clickHandlerSend(e:React.MouseEvent){
 
-function App()
-{
+  let target=e.target as HTMLButtonElement;
+
+  alert("clicked on  button "+target.innerText)
+ }
+ function clickHandlerClick(e:MouseEvent){
+   let target= e.target as HTMLButtonElement;
+  alert("clicked on  button" +target.innerText)
+
+ }
+ function App()
+ {
   return (
     <>
-    
+    Welcome to React
+    <Controls/>
+    {/* <Button value="Send" click={clickHandlerSend}/>
+    <Button value="Click" click={clickHandlerClick}/> */}
 
-    Welcome to App
-    <Greet name="CodeQuotient" years={32} />
-    <Greet name="Chitkara" />
-    
+    {/* <Greeting/>
+    <Greeting/> */}
+
     </>
   )
-}
-export default App
+ }
+ export default App;
+// import Greet from './Greet'
+
+// function App()
+// {
+//   let data=10;
+//   return (
+//     <>
+    
+
+//     Welcome to App
+//     <br/>
+    
+
+//     <Greet name="CodeQuotient" years={data}>
+//     <Test/>
+      
+//       </Greet>
+//     {/* <Greet name="Chitkara" />
+//     <Greet/> */}
+    
+//     </>
+//   )
+// }
+// function Test()
+// {
+//   return (
+//     <>
+//     Test Component
+//     </>
+//   )
+// }
+// export default App
 
 // import testObj from "./data.json";
 
