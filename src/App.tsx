@@ -1,5 +1,6 @@
 
- import './App.css'
+ //import './App.css'
+import Banner from './Banner';
  //import Greeting from './Greeting';
  import Button from './Button';
 import Controls from './Controls';
@@ -18,8 +19,9 @@ import Controls from './Controls';
  {
   return (
     <>
-    Welcome to React
-    <Controls/>
+    <Banner/>
+    {/* Welcome to React
+    <Controls/> */}
     {/* <Button value="Send" click={clickHandlerSend}/>
     <Button value="Click" click={clickHandlerClick}/> */}
 
