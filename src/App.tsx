@@ -4,6 +4,8 @@ import Banner from './Banner';
  //import Greeting from './Greeting';
  import Button from './Button';
 import Controls from './Controls';
+import Parent from './Parent';
+import UI from './UI';
  function clickHandlerSend(e:React.MouseEvent){
 
   let target=e.target as HTMLButtonElement;
@@ -18,8 +20,12 @@ import Controls from './Controls';
  function App()
  {
   return (
-    <>
-    <Banner/>
+   
+   <>
+   {/* <UI/> */}
+   <Parent/>
+
+    {/* <Banner/> */}
     {/* Welcome to React
     <Controls/> */}
     {/* <Button value="Send" click={clickHandlerSend}/>
