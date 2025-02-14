@@ -5,6 +5,7 @@ import Banner from './Banner';
  import Button from './Button';
 import Controls from './Controls';
 import Parent from './Parent';
+import State from './State';
 import UI from './UI';
  function clickHandlerSend(e:React.MouseEvent){
 
@@ -22,8 +23,10 @@ import UI from './UI';
   return (
    
    <>
+   <State name="Code"/>
+
    {/* <UI/> */}
-   <Parent/>
+   {/* <Parent/> */}
 
     {/* <Banner/> */}
     {/* Welcome to React
