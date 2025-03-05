@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 // const Login=()=>{
 //    const [data,setData]= useState("hi");
@@ -22,6 +23,7 @@ type UserType={
     email:string
 }
 const Login=()=>{
+    const location=useLocation();
     const [isLoggedIn,setLogin]=useState(false);
     const [user,setUser]=useState<UserType>({} as UserType);
     //const [user,setUser]=useState<UserType|null>(null);
@@ -37,6 +39,7 @@ const Login=()=>{
     }
     return (
         <>
+        Value:{location.state?.data}
         {isLoggedIn?'Logged in':'Logged Out'}
         {user.name} {user.email}
         {/* <button onClick={()=>{setLogin(true)}}>Log in</button>

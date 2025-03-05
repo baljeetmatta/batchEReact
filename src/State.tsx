@@ -14,8 +14,26 @@ type StateType={
 
 class State extends React.Component<StateProps,StateType>
 {
-    state={data:"Test Code",years:10};
+        state={data:"Test Code",years:10};
+    
+    id:number=-1;
+componentDidMount(): void {
+    setInterval(this.test,1000);      
+}
+    
+    
 
+
+
+  test=()=>{
+
+    console.log("Called");
+     // this.setState({years:this.state.years+1});
+this.setState((prev)=>{return {years:prev.years+1}});
+
+
+
+}
 
     clickHandler=()=>{
        // this.setState({data:"Hi"});
@@ -23,9 +41,9 @@ class State extends React.Component<StateProps,StateType>
     //    this.setState({years:this.state.years+1});
     //    this.setState({years:this.state.years+1});
 
-    this.setState((prev)=>{return {years:prev.years+1}})
-    this.setState((prev)=>{return {years:prev.years+1}})
-    this.setState((prev)=>{return {years:prev.years+1}})
+    // this.setState((prev)=>{return {years:prev.years+1}})
+    // this.setState((prev)=>{return {years:prev.years+1}})
+    // this.setState((prev)=>{return {years:prev.years+1}})
 
 
 
