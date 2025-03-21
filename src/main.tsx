@@ -15,7 +15,9 @@ createRoot(document.getElementById('root')!).render(
     {/* <App/> */}
     {/* <CTimer/> */}
     {/* <BrowserRouter> */}
+    <BrowserRouter>
     <App/>
+    </BrowserRouter>
     {/* </BrowserRouter> */}
   </StrictMode>,
 )
