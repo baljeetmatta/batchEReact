@@ -237,6 +237,7 @@ import { LoginContext } from "./components/LoginContext";
 
 import { useState } from "react";
 import PrivateRoute from "./PrivateRoute";
+import BugApp from "./components/BugApp";
 function App(){
 
   const [name,setName]=useState<string|undefined>(undefined);
@@ -244,17 +245,19 @@ function App(){
   return (
     <>
     Username :{name}
-    <ul className="flex grid-4">
+    <ul className="flex gap-4">
       <li><NavLink to="/" >Home</NavLink></li>
       <li><NavLink to="/login" >Login</NavLink></li>
       <li><NavLink to="/about" >About</NavLink></li>
       <li><NavLink to="/contact" >Contact</NavLink></li>
+      <li><NavLink to="/bugs" >Bug App</NavLink></li>
       
     </ul>
     <LoginContext.Provider value={{name,setName}}>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/login" element={<LoginScreen/>}/>
+      <Route path="/bugs" element={<BugApp/>}/>
       <Route path="/" element={<PrivateRoute><Outlet/></PrivateRoute>}>
       <Route path="about" element={<About/>}/>
       <Route path="contact" element={<Contact/>}/>
